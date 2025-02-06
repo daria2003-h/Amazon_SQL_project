@@ -8,7 +8,7 @@ I have worked on analyzing a dataset of over 20,000 sales records from an Amazon
 An ERD diagram is included to visually represent the database schema and relationships between tables.
 
 ---
-
+![ERD](https://github.com/daria2003-h/Amazon_SQL_project/blob/main/amazon_schemas.png)
 
 
 ## **Database Setup & Design**
