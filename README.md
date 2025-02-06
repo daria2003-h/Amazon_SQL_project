@@ -564,7 +564,7 @@ GROUP BY s.seller_id
 ORDER BY total_sales DESC;
 ```
 
-### 16. IDENTIFY customers into returning or new
+### 16. IDENTIFY customers into returning or not returning
 if the customer has done more than 5 return categorize them as returning otherwise as not returning
 Challenge: List customers id, name, total orders, total returns
 
@@ -599,21 +599,20 @@ WITH ProductACategory AS (
     -- Step 1: Get the category of Product A
     SELECT category_id
     FROM products
-    WHERE product_id = 685  -- Replace X with Product A's ID
 ),
 Bought_A AS (
     -- Step 2: Customers who bought Product A
     SELECT DISTINCT o.customer_id
     FROM orders o
     JOIN order_item oi ON o.order_id = oi.order_id
-    WHERE oi.product_id = 685  -- Replace X with Product A's ID
+    WHERE oi.product_id = 685  
 ),
 Bought_B AS (
-    -- Step 3: Customers who bought Product B (if needed for exclusion logic)
+    -- Step 3: Customers who bought Product B 
     SELECT DISTINCT o.customer_id
     FROM orders o
     JOIN order_item oi ON o.order_id = oi.order_id
-    WHERE oi.product_id = 600  -- Replace Y with Product B's ID
+    WHERE oi.product_id = 600  
 ),
 Customers_Only_A AS (
     -- Step 4: Customers who bought Product A but not Product B
