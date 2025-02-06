@@ -1,5 +1,5 @@
 # **Amazon USA Sales Analysis Project**
-
+![](https://github.com/daria2003-h/Amazon_SQL_project/blob/main/l-intro-1677527302.jpg)
 ---
 
 ## **Project Overview**
